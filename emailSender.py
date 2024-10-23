@@ -6,13 +6,13 @@ import requests
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': '123456',
-    'database': 'vpc_vpc',  # ajuste conforme necessário
+    'password': 'pass',
+    'database': 'vpc_vpc',
     'port': 3306
 }
 
 # Configurações da API Brevo
-api_key = "api"  # Substitua pela sua API Key do Brevo
+api_key = "api"
 api_url = "https://api.brevo.com/v3/smtp/email"
 
 # Função para enviar email via API Brevo
@@ -24,7 +24,7 @@ def enviar_email(destinatario, assunto, mensagem):
     }
 
     data = {
-        "sender": {"name": "VipCard Fidelidade", "email": "guilhermesz1201@gmail.com"},
+        "sender": {"name": "Sender Name", "email": "sendername@gmail.com"},
         "to": [{"email": destinatario}],
         "subject": assunto,
         "htmlContent": f"<html><body>{mensagem}</body></html>"
